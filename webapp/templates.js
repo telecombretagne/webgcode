@@ -4,7 +4,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
 
 function program1(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n        ");
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.Select", {hash:{
@@ -16,7 +16,7 @@ function program1(depth0,data) {
   }
 
 function program3(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n        ");
   data.buffer.push(escapeExpression((helper = helpers['gcode-editor'] || (depth0 && depth0['gcode-editor']),options={hash:{
@@ -29,7 +29,7 @@ function program3(depth0,data) {
   }
 
 function program5(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n        ");
   data.buffer.push(escapeExpression((helper = helpers['js-editor'] || (depth0 && depth0['js-editor']),options={hash:{
@@ -42,13 +42,13 @@ function program5(depth0,data) {
   }
 
 function program7(depth0,data) {
-  
-  
+
+
   data.buffer.push("\n        <div id=\"loader\">&nbsp;</div>\n    ");
   }
 
 function program9(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n        ");
   data.buffer.push(escapeExpression((helper = helpers.partial || (depth0 && depth0.partial),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "jobView", options) : helperMissing.call(depth0, "partial", "jobView", options))));
@@ -63,24 +63,18 @@ function program9(depth0,data) {
   data.buffer.push("\n    ");
   stack1 = helpers['if'].call(depth0, "usingGcode", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(5, program5, data),fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    <button ");
+  data.buffer.push("\n    <br/><button class=\"btn btn-primary btn-block\"");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "simulate", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(" ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'disabled': ("computing")
   },hashTypes:{'disabled': "STRING"},hashContexts:{'disabled': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(">Simulate</button>\n    <button ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "loadBigSample", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(" ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'disabled': ("computing")
-  },hashTypes:{'disabled': "STRING"},hashContexts:{'disabled': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(">Load a bigger sample</button>\n\n    ");
+  data.buffer.push("><i class=\"fa fa-play\" aria-hidden=\"true\"></i> Simuler</button>\n");
   stack1 = helpers['if'].call(depth0, "computing", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</div>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["controllerPanel"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -88,7 +82,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n            <button class=\"btn btn-lg\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "sendProgram", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -112,7 +106,7 @@ function program1(depth0,data) {
   return buffer;
   }
 function program2(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n                <button class=\"btn btn-lg\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "abort", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -121,7 +115,7 @@ function program2(depth0,data) {
   }
 
 function program4(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n                <button class=\"btn btn-lg\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "resumeProgram", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -130,7 +124,7 @@ function program4(depth0,data) {
   }
 
 function program6(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                <button class=\"btn btn-lg\" id='manualControl' ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "setManualMode", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -142,7 +136,7 @@ function program6(depth0,data) {
   }
 
 function program8(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n                <button class=\"btn btn-lg home\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "home", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -151,7 +145,7 @@ function program8(depth0,data) {
   }
 
 function program10(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n            <button id='connect' ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "connect", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -160,7 +154,7 @@ function program10(depth0,data) {
   }
 
 function program12(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                    <tr ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
@@ -191,7 +185,7 @@ function program12(depth0,data) {
   return buffer;
   }
 function program13(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n                                ");
   data.buffer.push(escapeExpression((helper = helpers['edit-axis'] || (depth0 && depth0['edit-axis']),options={hash:{
@@ -206,7 +200,7 @@ function program13(depth0,data) {
   }
 
 function program15(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                                <span class=\"pos\">");
   stack1 = helpers._triageMustache.call(depth0, "formattedPosition", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -216,7 +210,7 @@ function program15(depth0,data) {
   }
 
 function program17(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n                                ");
   data.buffer.push(escapeExpression((helper = helpers['edit-axis'] || (depth0 && depth0['edit-axis']),options={hash:{
@@ -231,7 +225,7 @@ function program17(depth0,data) {
   }
 
 function program19(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                                <span class=\"pos\">");
   stack1 = helpers._triageMustache.call(depth0, "formattedOffset", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -241,8 +235,8 @@ function program19(depth0,data) {
   }
 
 function program21(depth0,data) {
-  
-  
+
+
   data.buffer.push("\n                    <div id=\"loader\"><i class=\"fa fa-spinner fa-spin\"></i></div>\n                ");
   }
 
@@ -329,7 +323,7 @@ function program21(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("<span\n                    title=\"ISO units, there is no way to change it.\">mm</span>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"camPanel\">\n    <iframe id=\"webView\" src=\"visucamTest.html\"></iframe>\n</div>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["index"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -337,7 +331,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 function program1(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n        <h2 style=\"position: relative; height: 90px;\">Your Jobs\n            <button title=\"create new job\" class=\"btn btn-default\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "createJob", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -350,7 +344,7 @@ function program1(depth0,data) {
   return buffer;
   }
 function program2(depth0,data) {
-  
+
   var buffer = '', stack1, helper, options;
   data.buffer.push("\n                <li style=\"min-width: max-content;flex-grow: 2;\">");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
@@ -361,7 +355,7 @@ function program2(depth0,data) {
   return buffer;
   }
 function program3(depth0,data) {
-  
+
   var stack1;
   stack1 = helpers._triageMustache.call(depth0, "name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
@@ -369,14 +363,14 @@ function program3(depth0,data) {
   }
 
 function program5(depth0,data) {
-  
-  
+
+
   data.buffer.push("\n                No job yet.\n            ");
   }
 
 function program7(depth0,data) {
-  
-  
+
+
   data.buffer.push("\n        Welcome, you need to log in before anything else.\n    ");
   }
 
@@ -385,7 +379,7 @@ function program7(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</div>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["job"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -393,13 +387,13 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
-  
-  
+
+
   data.buffer.push("<i class=\"fa fa-cog fa-spin\" title=\"computing...\"></i> ");
   }
 
 function program3(depth0,data) {
-  
+
   var buffer = '', stack1, helper, options;
   data.buffer.push("\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
@@ -410,7 +404,7 @@ function program3(depth0,data) {
   return buffer;
   }
 function program4(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push(" <span ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "toggleHide", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -431,13 +425,13 @@ function program4(depth0,data) {
   }
 
 function program6(depth0,data) {
-  
-  
+
+
   data.buffer.push("\n            No shape yet. Try dropping a SVG or STL file on the window.\n        ");
   }
 
 function program8(depth0,data) {
-  
+
   var buffer = '', stack1, helper, options;
   data.buffer.push("\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
@@ -449,7 +443,7 @@ function program8(depth0,data) {
   return buffer;
   }
 function program9(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                <div class=\"arrow-panel\">\n                    ");
   stack1 = helpers['if'].call(depth0, "isNotFirst", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(12, program12, data),fn:self.program(10, program10, data),contexts:[depth0],types:["ID"],data:data});
@@ -478,7 +472,7 @@ function program9(depth0,data) {
   return buffer;
   }
 function program10(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n                        <div title=\"move operation one position earlier\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "moveEarlier", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -487,13 +481,13 @@ function program10(depth0,data) {
   }
 
 function program12(depth0,data) {
-  
-  
+
+
   data.buffer.push("\n                        <div class=\"arrow-button\">&nbsp;</div>\n                    ");
   }
 
 function program14(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n                        <div title=\"move operation one position later\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "moveLater", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -502,20 +496,20 @@ function program14(depth0,data) {
   }
 
 function program16(depth0,data) {
-  
-  
+
+
   data.buffer.push("<i class=\"fa fa-play-circle\" title=\"operation currently running\"></i>");
   }
 
 function program18(depth0,data) {
-  
-  
+
+
   data.buffer.push("<i class=\"fa fa-cog fa-spin\" title=\"computing...\"></i>");
   }
 
 function program20(depth0,data) {
-  
-  
+
+
   data.buffer.push("\n            No operation yet.\n        ");
   }
 
@@ -600,22 +594,14 @@ function program20(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</div>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["jobView"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
-
-  data.buffer.push("<div>\n    <dl>\n        <dt>Total Duration:</dt>\n        <dd ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'title': ("formattedTotalTime.detailed")
-  },hashTypes:{'title': "ID"},hashContexts:{'title': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(">");
-  stack1 = helpers._triageMustache.call(depth0, "formattedTotalTime.humanized", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</dd>\n    </dl>\n    <dl>\n        <dt>Bounds (@tool center):</dt>\n        <dd>\n            <table class=\"boundsTable\" style=\"text-align:right;\">\n                <thead>\n                <tr>\n                    <th>&nbsp;</th>\n                    <th>min</th>\n                    <th>max</th>\n                </tr>\n                </thead>\n                <tbody>\n                <tr>\n                    <th>X</th>\n                    <td>");
+  data.buffer.push("<br/><dl>\n        <dt>Limites du modèle 3D (en mm) :</dt>\n        <dd>\n            <table class=\"table\" style=\"text-align:right;\">\n                <thead>\n                <tr>\n                    <th>&nbsp;</th>\n                    <th>min</th>\n                    <th>max</th>\n                </tr>\n                </thead>\n                <tbody>\n                <tr>\n                    <th>X</th>\n                    <td>");
   data.buffer.push(escapeExpression((helper = helpers.num || (depth0 && depth0.num),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "bbox.min.x", options) : helperMissing.call(depth0, "num", "bbox.min.x", options))));
   data.buffer.push("</td>\n                    <td>");
   data.buffer.push(escapeExpression((helper = helpers.num || (depth0 && depth0.num),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "bbox.max.x", options) : helperMissing.call(depth0, "num", "bbox.max.x", options))));
@@ -629,16 +615,16 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression((helper = helpers.num || (depth0 && depth0.num),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "bbox.max.z", options) : helperMissing.call(depth0, "num", "bbox.max.z", options))));
   data.buffer.push("</td>\n                </tr>\n                </tbody>\n            </table>\n        </dd>\n    </dl>\n</div>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["loading"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
+
 
 
   data.buffer.push("<h1><i class=\"fa fa-spinner fa-spin\"></i> LOADING...</h1>");
-  
+
 });
 Ember.TEMPLATES["operation"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -646,8 +632,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 function program1(depth0,data) {
-  
-  
+
+
   data.buffer.push("<i class=\"fa fa-cog fa-spin\" title=\"computing...\"></i> ");
   }
 
@@ -693,7 +679,7 @@ function program1(depth0,data) {
   data.buffer.push(escapeExpression((helper = helpers.partial || (depth0 && depth0.partial),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "specialTemplate", options) : helperMissing.call(depth0, "partial", "specialTemplate", options))));
   data.buffer.push("\n        </tbody>\n    </table>\n</div>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["operation3DMilling"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -701,7 +687,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
 function program1(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n    <tr>\n        <th>Tool Angle:</th>\n        <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression((helper = helpers['number-input'] || (depth0 && depth0['number-input']),options={hash:{
@@ -769,7 +755,7 @@ function program1(depth0,data) {
   },hashTypes:{'numericValue': "ID"},hashContexts:{'numericValue': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "number-input", options))));
   data.buffer.push("\n        <span class=\"input-group-addon\">%</span></td>\n</tr>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["operationDrilling"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -787,7 +773,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   },hashTypes:{'numericValue': "ID"},hashContexts:{'numericValue': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "number-input", options))));
   data.buffer.push(" <span\n            class=\"input-group-addon\">mm</span></td>\n</tr>\n");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["operationPocket"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -831,7 +817,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   },hashTypes:{'numericValue': "ID",'min': "STRING",'step': "STRING",'disabled': "ID",'classNames': "STRING"},hashContexts:{'numericValue': depth0,'min': depth0,'step': depth0,'disabled': depth0,'classNames': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "number-input", options))));
   data.buffer.push("\n        <span class=\"input-group-addon\">units</span></td>\n</tr>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["operationRampingContour"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -870,7 +856,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   },hashTypes:{'numericValue': "ID",'min': "STRING",'step': "STRING"},hashContexts:{'numericValue': depth0,'min': depth0,'step': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "number-input", options))));
   data.buffer.push("\n        <span class=\"input-group-addon\">units</span></td>\n</tr>\n");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["operationSimpleContour"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -878,7 +864,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
 function program1(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n    <tr>\n        <th title=\"Engagement in %\">Radial<br>Engagement:</th>\n        <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression((helper = helpers['number-input'] || (depth0 && depth0['number-input']),options={hash:{
@@ -928,7 +914,7 @@ function program1(depth0,data) {
   stack1 = helpers['if'].call(depth0, "contour_multipass", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   return buffer;
-  
+
 });
 Ember.TEMPLATES["operationSimpleEngraving"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -936,7 +922,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
 function program1(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n    <tr>\n        <th title=\"Distance between swivel axis and blade tip, it's often 0.25mm for Roland blades\">Blade Offset:</th>\n        <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression((helper = helpers['number-input'] || (depth0 && depth0['number-input']),options={hash:{
@@ -963,7 +949,7 @@ function program1(depth0,data) {
   stack1 = helpers['if'].call(depth0, "dragknife_corner_action", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   return buffer;
-  
+
 });
 Ember.TEMPLATES["shape"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -971,13 +957,13 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
 function program1(depth0,data) {
-  
-  
+
+
   data.buffer.push("<i class=\"fa fa-cog fa-spin\" title=\"computing...\"></i> ");
   }
 
 function program3(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n            <tr>\n                <th>Shape:</th>\n                <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.Select", {hash:{
@@ -991,7 +977,7 @@ function program3(depth0,data) {
   return buffer;
   }
 function program4(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n                <tr>\n                    <th>Width:</th>\n                    <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression((helper = helpers['number-input'] || (depth0 && depth0['number-input']),options={hash:{
@@ -1014,7 +1000,7 @@ function program4(depth0,data) {
   }
 
 function program6(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                ");
   stack1 = helpers['if'].call(depth0, "isCircle", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data),contexts:[depth0],types:["ID"],data:data});
@@ -1023,7 +1009,7 @@ function program6(depth0,data) {
   return buffer;
   }
 function program7(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n                    <tr>\n                        <th>Radius:</th>\n                        <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression((helper = helpers['number-input'] || (depth0 && depth0['number-input']),options={hash:{
@@ -1042,7 +1028,7 @@ function program7(depth0,data) {
   }
 
 function program9(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                    ");
   stack1 = helpers['if'].call(depth0, "isText", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(12, program12, data),fn:self.program(10, program10, data),contexts:[depth0],types:["ID"],data:data});
@@ -1051,7 +1037,7 @@ function program9(depth0,data) {
   return buffer;
   }
 function program10(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n                        <tr>\n                            <th>Text:</th>\n                            <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
@@ -1081,7 +1067,7 @@ function program10(depth0,data) {
   }
 
 function program12(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                        ");
   stack1 = helpers['if'].call(depth0, "isPoint", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(15, program15, data),fn:self.program(13, program13, data),contexts:[depth0],types:["ID"],data:data});
@@ -1090,7 +1076,7 @@ function program12(depth0,data) {
   return buffer;
   }
 function program13(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n                            <tr>\n                                <th>X:</th>\n                                <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression((helper = helpers['number-input'] || (depth0 && depth0['number-input']),options={hash:{
@@ -1105,7 +1091,7 @@ function program13(depth0,data) {
   }
 
 function program15(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                            ");
   stack1 = helpers['if'].call(depth0, "isSlice", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(18, program18, data),fn:self.program(16, program16, data),contexts:[depth0],types:["ID"],data:data});
@@ -1114,7 +1100,7 @@ function program15(depth0,data) {
   return buffer;
   }
 function program16(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n                                <tr>\n                                    <th>Outline:</th>\n                                    <td class=\"input-group input-group-sm\">");
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.Select", {hash:{
@@ -1132,7 +1118,7 @@ function program16(depth0,data) {
   }
 
 function program18(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n                                <tr>\n                                    <th>well well well</th>\n                                    <td>\n                                        ");
   stack1 = helpers._triageMustache.call(depth0, "manualDefinition.type", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -1142,7 +1128,7 @@ function program18(depth0,data) {
   }
 
 function program20(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n            <tr>\n                <th title=\"the plane of symmetry is along the Y axis and passes by the center of the bbox\">Flipped:</th>\n                <td>\n                    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
@@ -1154,14 +1140,14 @@ function program20(depth0,data) {
   }
 
 function program22(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n        \n        ");
   return buffer;
   }
 
 function program24(depth0,data) {
-  
+
   var buffer = '', helper, options;
   data.buffer.push("\n            <tr>\n                <th>X repetition:</th>\n                <td>\n                    ");
   data.buffer.push(escapeExpression((helper = helpers['number-input'] || (depth0 && depth0['number-input']),options={hash:{
@@ -1221,7 +1207,7 @@ function program24(depth0,data) {
   data.buffer.push(escapeExpression((helper = helpers.number || (depth0 && depth0.number),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "boundingBox.z.range", options) : helperMissing.call(depth0, "number", "boundingBox.z.range", options))));
   data.buffer.push("]</td>\n                    </tr>\n                    </tbody>\n                </table>\n            </td>\n        </tr>\n        </tbody>\n    </table>\n\n</div>");
   return buffer;
-  
+
 });
 Ember.TEMPLATES["visucamApp"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -1229,32 +1215,32 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 function program1(depth0,data) {
-  
-  
+
+
   data.buffer.push(" <i class=\"fa fa-link\" title=\"server connection ok\"></i>\n        ");
   }
 
 function program3(depth0,data) {
-  
-  
+
+
   data.buffer.push(" <i class=\"fa fa-chain-broken fa-2x\" title=\"server connection is broken\"\n                    style=\"background-color: orangered\"></i>\n        ");
   }
 
 function program5(depth0,data) {
-  
+
   var stack1, helper, options;
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   else { data.buffer.push(''); }
   }
 function program6(depth0,data) {
-  
-  
+
+
   data.buffer.push("Job List");
   }
 
 function program8(depth0,data) {
-  
+
   var buffer = '', stack1;
   data.buffer.push("\n            <div class=\"dropdown\">\n                <button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\"\n                    ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
@@ -1274,7 +1260,7 @@ function program8(depth0,data) {
   }
 
 function program10(depth0,data) {
-  
+
   var buffer = '';
   data.buffer.push("\n            <div class=\"dropdown\">\n                <button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\">\n                    login\n                    <span class=\"caret\"></span>\n                </button>\n                <ul class=\"dropdown-menu dropdown-menu-right\" role=\"menu\" aria-labelledby=\"dropdownMenu1\">\n                    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"#\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "loginanonymous", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -1301,5 +1287,5 @@ function program10(depth0,data) {
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   return buffer;
-  
+
 });
