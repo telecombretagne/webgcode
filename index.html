@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="webapp/twoDView.css" type="text/css">
     <link rel="stylesheet" href="webapp/threeDView.css" type="text/css">
     <link rel="stylesheet" href="webapp/libs/bootstrap/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="webapp/libs/font-awesome-4.2.0/css/font-awesome.min.css" type="text/css">  
+    <link rel="stylesheet" href="webapp/libs/font-awesome-4.2.0/css/font-awesome.min.css" type="text/css">
     <style>
 
         body, html {
@@ -96,8 +96,12 @@
 <body>
     <div id="app">
     </div>
-    <script id="demoCode" type="application/gcode">G1 Y20         ;deplacement lineaire
-G2 X10 Y30 R10 ;arc de cercle
+    <script id="demoCode" type="application/gcode">G1 Y20 ; je pars de l'origine à 0,0 puis je me déplace de 20mm sur l'axe Y
+       ; je suis donc à 0,20
+G1 X20 ; je me déplace de 20mm sur l'axe X
+G1 Y0  ; je me déplace de -20mm sur l'axe Y
+G1 X0  ; je me déplace de -20mm sur l'axe X pour revenir à ma position d'origine et hop, un carré !G1 Y20   ;exemple de deplacement lineaire
+G1 X20 ;ces instructions peuvent être supprimees
     </script>
     <script>
         require(['Ember', 'cnc/ui/graphicView', 'cnc/cam/cam', 'cnc/util', 'cnc/ui/gcodeEditor', 'cnc/gcode/gcodeSimulation', 'templates'],
